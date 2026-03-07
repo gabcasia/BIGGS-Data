@@ -20,7 +20,7 @@ DATE_COL = "date"
 HASH_PARTITIONS = int(os.environ.get("HASH_PARTITIONS", "8"))
 RANGE_PARTITIONS = int(os.environ.get("RANGE_PARTITIONS", "8"))
 
-OUTPUT_DIR = os.environ.get("OUTPUT_DIR", r"C:\spark_out")
+OUTPUT_DIR = os.path.join(os.getcwd(), "spark_output")
 
 
 def create_spark(app_name: str = "Lab1_Partitioning") -> SparkSession:
